@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,300;1,400&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.leaderboard {
+  margin: 0 auto;
+  width: 60%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 5rem;
+}
+
+.recent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  color: rgb(81, 81, 81);
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: rgb(81, 81, 81);
+}
+
+button {
+  background: transparent;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 0.7rem 1rem;
+  font-size: 16px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+ul {
+  border: 2px solid grey;
+}
+
+ul li {
+  padding: 0.5rem 0 0.5rem 0.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+ul li:nth-child(even) {
+  background: rgb(152, 152, 152);
+  color: white;
+}
+
+ul li:nth-child(odd) {
+  background: transparent;
+}
+
+.add-score h2 {
+  margin-bottom: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input[type='text'],
+form input[type='number'] {
+  margin-bottom: 1.1rem;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
