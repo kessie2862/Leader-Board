@@ -64,8 +64,8 @@
 
 ### Key Features <a name="key-features"></a>
 
-<!-- - User can add tasks to a list
-- Lists are rendered dynamically on page load  -->
+- User can add a score to a list of scores
+- Scores are rendered dynamically
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -131,8 +131,8 @@ To open it in your preferred browser, run the command
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-<!-- - [ ] **[Store user data Local Storage]**
-- [ ] **[Delete and mark tasks as completed]** -->
+- [ ] **[Consume the Leaderboard API using async and await]**
+- [ ] **[Refresh scores for a game created from the API]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
