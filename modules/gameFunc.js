@@ -2,8 +2,7 @@
 // 2. Get all scores for a game from the LeaderBoard API
 // 3. Save score for a game to the API
 
-const apiUrl =
-  'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
+const apiUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
 
 export const createGameScores = (name, score) => {
   const li = document.createElement('li');
