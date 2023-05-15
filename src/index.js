@@ -1,28 +1,51 @@
 import './index.css';
+import {
+  createGameScores,
+  getGameScores,
+  saveGameScore,
+} from '../modules/gameFunc.js';
 
-const submit = document.querySelector('.submit');
+const apiUrl =
+  'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
+
+// creating a new game and saving its ID
+let gameId;
+const createGame = async () => {
+  const response = await fetch(`${apiUrl}games/`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ name: 'My Game' }),
+  });
+  const data = await response.json();
+  gameId = data.result.slice(-5);
+};
+createGame();
+
+// Refresh button
+const refreshButton = document.querySelector('.refresh');
+const scoresList = document.getElementById('scores');
+refreshButton.addEventListener('click', async () => {
+  const scores = await getGameScores(gameId);
+  scoresList.innerHTML = '';
+  scores.forEach((score) => {
+    const li = createGameScores(score.user, score.score);
+    scoresList.appendChild(li);
+  });
+});
+
+// Submit button
+const submitButton = document.querySelector('.submit');
 const nameInput = document.getElementById('name');
 const scoreInput = document.getElementById('score');
-const scoresList = document.getElementById('scores');
-
-// create a new score item for the list
-const createScores = (name, score) => {
-  const li = document.createElement('li');
-  li.textContent = `${name}: ${score}`;
-  return li;
-};
-
-submit.addEventListener('click', (e) => {
+submitButton.addEventListener('click', async (e) => {
   e.preventDefault();
-
   const name = nameInput.value;
   const score = scoreInput.value;
-
-  // Add new score to the list
-  const newScore = createScores(name, score);
+  await saveGameScore(gameId, name, score);
+  const newScore = createGameScores(name, score);
   scoresList.appendChild(newScore);
-
-  // clear the input fields
   nameInput.value = '';
   scoreInput.value = '';
 });
