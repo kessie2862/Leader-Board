@@ -16,7 +16,7 @@ body {
 
 .leaderboard {
   margin: 0 auto;
-  width: 60%;
+  width: 70%;
 }
 
 .container {
@@ -45,13 +45,18 @@ h2 {
 }
 
 button {
-  background: transparent;
-  border: 1px solid grey;
+  background-color: #16bc90;
+  border: none;
+  color: #fff;
   border-radius: 5px;
   padding: 0.7rem 1rem;
   font-size: 16px;
   cursor: pointer;
   align-self: flex-end;
+}
+
+button:hover {
+  background-color: #038c68;
 }
 
 ul {
