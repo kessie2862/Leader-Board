@@ -5,10 +5,12 @@ import {
   saveGameScore,
 } from '../modules/gameFunc.js';
 
+// 1. Create a new game and save it's ID
+// 2. Add functionalities for refreshing and submitting the game
+
 const apiUrl =
   'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
 
-// creating a new game and saving its ID
 let gameId;
 const createGame = async () => {
   const response = await fetch(`${apiUrl}games/`, {
