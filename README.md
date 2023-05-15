@@ -73,7 +73,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link]()
+- [Live Demo Link](https://kessie2862.github.io/Leader-Board/dist/)
 
 <!-- GETTING STARTED -->
 
