@@ -5,6 +5,9 @@ import {
   saveGameScore,
 } from '../modules/gameFunc.js';
 
+const refreshButton = document.querySelector('.refresh');
+const submitButton = document.querySelector('.submit');
+
 // 1. Create a new game and save its ID
 // 2. Storing the generated game IDs in the localStorage
 // 2.a. Check if a game ID has already been stored
@@ -35,7 +38,6 @@ const createGame = async () => {
 createGame();
 
 // Refresh button
-const refreshButton = document.querySelector('.refresh');
 refreshButton.addEventListener('click', async () => {
   const scores = await getGameScores(gameId);
   const scoresList = document.getElementById('scores');
@@ -47,7 +49,6 @@ refreshButton.addEventListener('click', async () => {
 });
 
 // Submit button
-const submitButton = document.querySelector('.submit');
 submitButton.addEventListener('click', async (event) => {
   event.preventDefault();
   const nameInput = document.getElementById('name');
