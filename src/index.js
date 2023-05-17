@@ -11,7 +11,8 @@ import {
 // 2.b. If not, create a new one in the localStorage
 // 3. Add functionalities for refreshing and submitting the game
 
-const apiUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
+const apiUrl =
+  'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
 
 let gameId;
 const createGame = async () => {
